@@ -1,11 +1,12 @@
+package so1;
 
-public final class semaphore {
+public final class Semaphore {
     private int valor;
-    public semaphore() {
+    public Semaphore() {
         valor = 0;
     }
 
-    public semaphore(int v) {
+    public Semaphore(int v) {
         valor = v;
     }
 
