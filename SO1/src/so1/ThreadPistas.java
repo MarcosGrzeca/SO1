@@ -17,6 +17,7 @@ public class ThreadPistas extends Thread{
     public String name;
     public Integer tipo;
     public Vetor vetor;
+    public Panel panel;
     /*
     Tipo 0 - Estrada de pouso
     Tipo 1 - Estrada de decolagem
@@ -25,7 +26,8 @@ public class ThreadPistas extends Thread{
     
     */
     
-    ThreadPistas(String name) {
+    ThreadPistas(String name, Panel panel) {
+        this.panel = panel;
         this.name = name;
         vetor = new Vetor();
     }
@@ -40,6 +42,7 @@ public class ThreadPistas extends Thread{
         try
          {
              System.out.println(this.name);
+             panel.setTextJTable(this.name);
          }
         catch(Exception e )
          {
