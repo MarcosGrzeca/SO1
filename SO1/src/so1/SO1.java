@@ -5,6 +5,9 @@
  */
 package so1;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author Marcos
@@ -37,6 +40,16 @@ public class SO1 {
           t3.start();
           t2.start();
           t1.start();
+          
+          while (true) {
+              try {
+                  //Atualizar tela
+                  Thread.sleep(1000); //Atualização a cada segundo
+              } catch (InterruptedException ex) {
+                  Logger.getLogger(SO1.class.getName()).log(Level.SEVERE, null, ex);
+              }
+              System.out.println(t1.getVetor());
+          }
          
     }
     
