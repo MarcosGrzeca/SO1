@@ -11,7 +11,7 @@ import javax.swing.JFrame;
 
 /**
  *
- * @author Marcos
+ * @author Marcos Grzeça
  */
 public class SO1 extends JFrame{
 
