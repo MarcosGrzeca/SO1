@@ -5,6 +5,8 @@
  */
 package so1;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -12,30 +14,60 @@ import java.util.logging.Logger;
  *
  * @author Marcos
  */
-public class ThreadPistas extends Thread{
+public class Fila{
 
     public String name;
     public Integer tipo;
     public Vetor vetor;
     public Panel panel;
+    public List<Aviao> avioes;
+
     /*
     Tipo 0 - Estrada de pouso
     Tipo 1 - Estrada de decolagem
     Tipo 2 - Pista de pouso
     Tipo 3 - Pista de decolagem
+    Tipo 4 - Fila decolagem
     
     */
     
-    ThreadPistas(String name, Panel panel) {
+    Fila(String name, Integer tipo, Panel panel) {
         this.panel = panel;
+        this.tipo = tipo;
         this.name = name;
-        vetor = new Vetor();
+        this.avioes = new ArrayList<Aviao>();
     }
     
-    public Vetor getVetor() {
-        return this.vetor;
+    public void inserirAviao(Aviao aviao) {
+      //  System.out.println("INSERINDO AVION NA FILA " + this.name);
+       avioes.add(aviao);
     }
- 
+    
+    public String getName() {
+       return this.name;
+    }
+    
+    public void removerPrimeiroAviao() {
+        if (avioes.isEmpty()) {
+            System.out.println("Fila vazia");
+        } else {
+            avioes.remove(0);
+        }
+    }
+    
+    public Integer getNumeroPrimeiroAviao() {
+        if (avioes.isEmpty()) {
+               return -1;
+        }
+        return avioes.get(0).getNumero();
+        
+    }
+    
+    public List<Aviao> getAvioes() {
+        return this.avioes;
+    }
+    
+    /*
     public void run()
     {
        while (true) {
@@ -51,11 +83,9 @@ public class ThreadPistas extends Thread{
            try {
             Thread.sleep(3000); //Atualização a cada segundo
            } catch (InterruptedException ex) {
-               Logger.getLogger(ThreadPistas.class.getName()).log(Level.SEVERE, null, ex);
+               Logger.getLogger(Fila.class.getName()).log(Level.SEVERE, null, ex);
            }
        }
     }
-    
-    
-    
+    */
 }
