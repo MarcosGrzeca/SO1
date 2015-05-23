@@ -92,9 +92,18 @@ public class Fila{
     
     public String getAvioesVirgula() {
         String ret = "";
-        for (Aviao item : this.getAvioes()) {
-            ret += item.getNumero() + " ";
-        }   
+        
+        try {
+            if (this.getAvioes().isEmpty()) {
+                return ret;
+            }
+            for (Aviao item : this.getAvioes()) {
+                ret += item.getNumero() + " ";
+            }   
+        } catch (Exception e) {
+            System.out.println("ERRO OBTENDO AVIOES");
+            ret = "Erro";
+        }
         return ret;
     }
 }

@@ -32,6 +32,8 @@ public class Panel extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         pdField = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
+        e5000Field = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -58,6 +60,14 @@ public class Panel extends javax.swing.JFrame {
 
         jLabel2.setText("Pista decolagem");
 
+        e5000Field.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                e5000FieldActionPerformed(evt);
+            }
+        });
+
+        jLabel3.setText("E5000");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -75,7 +85,13 @@ public class Panel extends javax.swing.JFrame {
                             .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(jLabel2)
-                                .addComponent(pdField, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addComponent(pdField, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(e5000Field, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel3)))
                 .addContainerGap(278, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -83,7 +99,11 @@ public class Panel extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 166, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 105, Short.MAX_VALUE)
+                .addComponent(jLabel3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(e5000Field, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(21, 21, 21)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(pdField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -108,6 +128,10 @@ public class Panel extends javax.swing.JFrame {
     private void pdFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pdFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_pdFieldActionPerformed
+
+    private void e5000FieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_e5000FieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_e5000FieldActionPerformed
 
     /**
      * @param args the command line arguments
@@ -155,12 +179,19 @@ public class Panel extends javax.swing.JFrame {
     public void setPdText(String teste) {
         pdField.setText(teste);
     }
+    public void setE500Text(String teste) {
+        e5000Field.setText(teste);
+    }
+    
+    
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField e5000Field;
     private javax.swing.JTextField fdField;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField pdField;
     // End of variables declaration//GEN-END:variables

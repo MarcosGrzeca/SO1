@@ -58,20 +58,27 @@ public class Aviao extends Thread{
             try {
                 Thread.sleep(3000);
                 if (this.filaAtual.getNumeroPrimeiroAviao() == this.numero) {
-                   SO1.sfd.down(); 
                    if (this.filaAtual.getName().equalsIgnoreCase("fd")) {
-                        //System.out.println("ENTREI AQUI");
+                        SO1.sfd.down();
+                        SO1.spd.down();
                         this.filaAtual.removerPrimeiroAviao();
+                        Thread.sleep(2000);
+                        this.filaAtual = SO1.pd;
+                        this.filaAtual.inserirAviao(this);
+                        SO1.spd.up();
+                        SO1.sfd.up();
+                    } else if (this.filaAtual.getName().equalsIgnoreCase("pd")) {
+                        SO1.spd.down();
                         SO1.se5000.down();
+                        this.filaAtual.removerPrimeiroAviao();
                         this.filaAtual = SO1.e5000;
                         this.filaAtual.inserirAviao(this);
                         SO1.se5000.up();
-                        
-                       System.out.println("REMOVENDO " + this.numero);
+                        SO1.spd.up();
                     }
                     
                    // this.filaAtual.removerPrimeiroAviao();
-                    SO1.sfd.up();
+                    
                 } else {
                    // System.out.println(this.numero + " NAO REMOVIDO");
                 }

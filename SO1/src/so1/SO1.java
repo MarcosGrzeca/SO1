@@ -23,8 +23,8 @@ import jdk.nashorn.internal.objects.NativeArray;
 public class SO1 extends JFrame{
 
     static Semaphore sfd = new Semaphore(1);
+    static Semaphore spd = new Semaphore(1);
     static Semaphore se5000 = new Semaphore(1);
-    static Semaphore SC = new Semaphore(0);
     static Semaphore SD = new Semaphore(0);
     static Semaphore SE = new Semaphore(0);
     static Semaphore SF = new Semaphore(0);
@@ -100,22 +100,21 @@ public class SO1 extends JFrame{
         
         while (true) {
             try {
-                Thread.sleep(2000); //Atualização a cada segundo
-                System.out.println("FD-------------------------------------------------------------------------");
+                //System.out.println("FD-------------------------------------------------------------------------");
                 //Atualizar tela
                 /*for (Aviao item : fd.getAvioes()) {
                    System.out.println(item.getNumero());
                 }
-                panel.setTextJTable("111");*/
-                panel.setFdText(fd.getAvioesVirgula());
                 System.out.println("AVIOES E5000 ---------------");
                 //Atualizar tela
                 for (Aviao item : e5000.getAvioes()) {
                    System.out.println(item.getNumero());
                 }
-                
-                panel.setPdText(e5000.getAvioesVirgula());
-                
+                panel.setTextJTable("111");*/
+                panel.setFdText(fd.getAvioesVirgula());
+                panel.setPdText(pd.getAvioesVirgula());
+                panel.setE500Text(e5000.getAvioesVirgula());
+                Thread.sleep(2000); //Atualização a cada segundo
               } catch (InterruptedException ex) {}
         }
         
