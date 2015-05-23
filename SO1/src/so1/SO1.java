@@ -11,6 +11,9 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JFrame;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
 import jdk.nashorn.internal.objects.NativeArray;
 
 /**
@@ -100,14 +103,19 @@ public class SO1 extends JFrame{
                 Thread.sleep(2000); //Atualização a cada segundo
                 System.out.println("FD-------------------------------------------------------------------------");
                 //Atualizar tela
-                for (Aviao item : fd.getAvioes()) {
+                /*for (Aviao item : fd.getAvioes()) {
                    System.out.println(item.getNumero());
                 }
+                panel.setTextJTable("111");*/
+                panel.setFdText(fd.getAvioesVirgula());
                 System.out.println("AVIOES E5000 ---------------");
                 //Atualizar tela
                 for (Aviao item : e5000.getAvioes()) {
                    System.out.println(item.getNumero());
                 }
+                
+                panel.setPdText(e5000.getAvioesVirgula());
+                
               } catch (InterruptedException ex) {}
         }
         
@@ -137,6 +145,18 @@ public class SO1 extends JFrame{
         // TODO code application logic here
         panel = new Panel();
         panel.setVisible(true);
+        
+        /*JTable tabela = new JTable();
+        DefaultTableModel model = new DefaultTableModel(dados , colunas );
+        tabela.setModel(model);
+        JScrollPane scroll = new JScrollPane();
+        scroll.setViewportView(tabela);
+        panel.add(scroll);
+                */
+        //panel.add(tabela);
+        
+                
+             //   panel.setTextJTable("111");
         
         //frame.set
         SO1 so = new SO1();

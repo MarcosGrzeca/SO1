@@ -88,4 +88,13 @@ public class Fila{
        }
     }
     */
+    
+    
+    public String getAvioesVirgula() {
+        String ret = "";
+        for (Aviao item : this.getAvioes()) {
+            ret += item.getNumero() + " ";
+        }   
+        return ret;
+    }
 }
