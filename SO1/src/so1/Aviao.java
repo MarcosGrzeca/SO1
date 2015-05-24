@@ -102,6 +102,7 @@ public class Aviao extends Thread{
                         this.filaAtual = SO1.e20000;
                         this.filaAtual.inserirAviao(this);
                         SO1.se18000.up();
+                       //Thread.sleep(2000);
                         SO1.se20000.up();
                     } else if (this.filaAtual.getName().equalsIgnoreCase("e20000")) {
                         SO1.se15000.down();

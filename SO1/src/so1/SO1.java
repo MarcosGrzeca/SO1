@@ -80,8 +80,33 @@ public class SO1 extends JFrame{
         pd = new Fila("PD", 3, panel);
         fd = new Fila("FD", 4, panel);
         
-        for (int i = 0; i < 15; i++) {
+        /*for (int i = 1; i < 20; i++) {
             Aviao aviao = new Aviao("FD", i, fd);
+            avioes.add(aviao);
+            aviao.start();
+        }*/
+        
+        for (int i = 1; i <= 5; i++) {
+            Aviao aviao = new Aviao("FD", i, fd);
+            avioes.add(aviao);
+            aviao.start();
+        }
+        
+        for (int i = 6; i <= 10; i++) {
+            Aviao aviao = new Aviao("E5000", i, e5000);
+            avioes.add(aviao);
+            aviao.start();
+        }
+        
+        for (int i = 11; i <= 15; i++) {
+            Aviao aviao = new Aviao("E18000", i, e18000);
+            avioes.add(aviao);
+            aviao.start();
+        }
+        
+        
+        for (int i = 16; i <= 20; i++) {
+            Aviao aviao = new Aviao("E10000", i, e10000);
             avioes.add(aviao);
             aviao.start();
         }
@@ -127,7 +152,7 @@ public class SO1 extends JFrame{
         
                 
                 
-                Thread.sleep(2000); //Atualização a cada segundo
+                Thread.sleep(1000); //Atualização a cada segundo
               } catch (InterruptedException ex) {}
         }
         
