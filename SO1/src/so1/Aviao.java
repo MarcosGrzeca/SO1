@@ -59,22 +59,81 @@ public class Aviao extends Thread{
                 Thread.sleep(3000);
                 if (this.filaAtual.getNumeroPrimeiroAviao() == this.numero) {
                    if (this.filaAtual.getName().equalsIgnoreCase("fd")) {
+                        //System.out.println("ENTREI AQUI");
                         SO1.sfd.down();
                         SO1.spd.down();
                         this.filaAtual.removerPrimeiroAviao();
-                        Thread.sleep(2000);
+                       // Thread.sleep(2000);
+                        System.out.println("DECOLANDO");
                         this.filaAtual = SO1.pd;
                         this.filaAtual.inserirAviao(this);
-                        SO1.spd.up();
                         SO1.sfd.up();
+                        //SO1.spd.up();
                     } else if (this.filaAtual.getName().equalsIgnoreCase("pd")) {
-                        SO1.spd.down();
+                        Thread.sleep(1000);
+                        //SO1.spd.down();
                         SO1.se5000.down();
                         this.filaAtual.removerPrimeiroAviao();
                         this.filaAtual = SO1.e5000;
                         this.filaAtual.inserirAviao(this);
                         SO1.se5000.up();
+                        Thread.sleep(1000);
                         SO1.spd.up();
+                    } else if (this.filaAtual.getName().equalsIgnoreCase("e5000")) {
+                        SO1.se12000.down();
+                        SO1.se5000.down();
+                        this.filaAtual.removerPrimeiroAviao();
+                        this.filaAtual = SO1.e12000;
+                        this.filaAtual.inserirAviao(this);
+                        SO1.se5000.up();
+                        SO1.se12000.up();
+                    } else if (this.filaAtual.getName().equalsIgnoreCase("e12000")) {
+                        SO1.se18000.down();
+                        SO1.se12000.down();
+                        this.filaAtual.removerPrimeiroAviao();
+                        this.filaAtual = SO1.e18000;
+                        this.filaAtual.inserirAviao(this);
+                        SO1.se12000.up();
+                        SO1.se18000.up();
+                    } else if (this.filaAtual.getName().equalsIgnoreCase("e18000")) {
+                        SO1.se20000.down();
+                        SO1.se18000.down();
+                        this.filaAtual.removerPrimeiroAviao();
+                        this.filaAtual = SO1.e20000;
+                        this.filaAtual.inserirAviao(this);
+                        SO1.se18000.up();
+                        SO1.se20000.up();
+                    } else if (this.filaAtual.getName().equalsIgnoreCase("e20000")) {
+                        SO1.se15000.down();
+                        SO1.se20000.down();
+                        this.filaAtual.removerPrimeiroAviao();
+                        this.filaAtual = SO1.e15000;
+                        this.filaAtual.inserirAviao(this);
+                        SO1.se20000.up();
+                        SO1.se15000.up();                        
+                    } else if (this.filaAtual.getName().equalsIgnoreCase("e15000")) {
+                        SO1.se10000.down();
+                        SO1.se15000.down();
+                        this.filaAtual.removerPrimeiroAviao();
+                        this.filaAtual = SO1.e10000;
+                        this.filaAtual.inserirAviao(this);
+                        SO1.se15000.up();                        
+                        SO1.se10000.up();
+                    } else if (this.filaAtual.getName().equalsIgnoreCase("e10000")) {
+                        SO1.se10000.down();
+                        SO1.spp.down();
+                        this.filaAtual.removerPrimeiroAviao();
+                        this.filaAtual = SO1.pp;
+                        this.filaAtual.inserirAviao(this);
+                        //SO1.spp.up();                        
+                        SO1.se10000.up();
+                    } else if (this.filaAtual.getName().equalsIgnoreCase("pp")) {
+                        //SO1.spp.down();
+                        this.filaAtual.removerPrimeiroAviao();
+                        this.filaAtual = SO1.fd;
+                        this.filaAtual.inserirAviao(this);
+                        SO1.spp.up();                        
+                        SO1.sfd.up();
                     }
                     
                    // this.filaAtual.removerPrimeiroAviao();

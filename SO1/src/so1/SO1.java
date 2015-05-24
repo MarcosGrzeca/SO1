@@ -24,12 +24,13 @@ public class SO1 extends JFrame{
 
     static Semaphore sfd = new Semaphore(1);
     static Semaphore spd = new Semaphore(1);
+    static Semaphore spp = new Semaphore(1);
     static Semaphore se5000 = new Semaphore(1);
-    static Semaphore SD = new Semaphore(0);
-    static Semaphore SE = new Semaphore(0);
-    static Semaphore SF = new Semaphore(0);
-    static Semaphore SG = new Semaphore(0);
-    static Semaphore SH = new Semaphore(0);
+    static Semaphore se12000 = new Semaphore(1);
+    static Semaphore se18000 = new Semaphore(1);
+    static Semaphore se20000 = new Semaphore(1);
+    static Semaphore se15000 = new Semaphore(1);
+    static Semaphore se10000 = new Semaphore(1);
     static Panel panel;
     
     static List<Aviao> avioes;
@@ -79,7 +80,7 @@ public class SO1 extends JFrame{
         pd = new Fila("PD", 3, panel);
         fd = new Fila("FD", 4, panel);
         
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 15; i++) {
             Aviao aviao = new Aviao("FD", i, fd);
             avioes.add(aviao);
             aviao.start();
@@ -111,9 +112,21 @@ public class SO1 extends JFrame{
                    System.out.println(item.getNumero());
                 }
                 panel.setTextJTable("111");*/
-                panel.setFdText(fd.getAvioesVirgula());
-                panel.setPdText(pd.getAvioesVirgula());
+                
+                
                 panel.setE500Text(e5000.getAvioesVirgula());
+                panel.setPdText(pd.getAvioesVirgula());
+                panel.setPpText(pp.getAvioesVirgula());
+                panel.setFdText(fd.getAvioesVirgula());
+                panel.setE12000Text(e12000.getAvioesVirgula());
+                panel.setE18000Text(e18000.getAvioesVirgula());
+                panel.setE20000Text(e20000.getAvioesVirgula());
+                panel.setE15000Text(e15000.getAvioesVirgula());
+                panel.setE10000Text(e10000.getAvioesVirgula());
+                
+        
+                
+                
                 Thread.sleep(2000); //Atualização a cada segundo
               } catch (InterruptedException ex) {}
         }
