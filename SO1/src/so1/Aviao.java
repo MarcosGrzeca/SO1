@@ -129,6 +129,8 @@ public class Aviao extends Thread{
                         //SO1.spp.up();                        
                         SO1.se10000.up();
                     } else if (this.filaAtual.getName().equalsIgnoreCase("pp")) {
+                        Thread.sleep(1000);
+                        
                         //SO1.spp.down();
                         this.filaAtual.removerPrimeiroAviao();
                         this.filaAtual = SO1.fd;
