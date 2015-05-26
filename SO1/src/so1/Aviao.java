@@ -69,7 +69,7 @@ public class Aviao extends Thread{
                         this.filaAtual.inserirAviao(this);
                         SO1.sfd.up();
                         //SO1.spd.up();
-                    } else if (this.filaAtual.getName().equalsIgnoreCase("pd")) {
+                    } else if (this.filaAtual.getName().equalsIgnoreCase("pd") && SO1.e5000.temEspaco()) {
                         Thread.sleep(1000);
                         //SO1.spd.down();
                         SO1.se5000.down();
@@ -79,7 +79,7 @@ public class Aviao extends Thread{
                         SO1.se5000.up();
                         Thread.sleep(1000);
                         SO1.spd.up();
-                    } else if (this.filaAtual.getName().equalsIgnoreCase("e5000")) {
+                    } else if (this.filaAtual.getName().equalsIgnoreCase("e5000")&& SO1.e12000.temEspaco()) {
                         SO1.se12000.down();
                         SO1.se5000.down();
                         this.filaAtual.removerPrimeiroAviao();
@@ -87,7 +87,7 @@ public class Aviao extends Thread{
                         this.filaAtual.inserirAviao(this);
                         SO1.se5000.up();
                         SO1.se12000.up();
-                    } else if (this.filaAtual.getName().equalsIgnoreCase("e12000")) {
+                    } else if (this.filaAtual.getName().equalsIgnoreCase("e12000")&& SO1.e18000.temEspaco()) {
                         SO1.se18000.down();
                         SO1.se12000.down();
                         this.filaAtual.removerPrimeiroAviao();
@@ -95,7 +95,7 @@ public class Aviao extends Thread{
                         this.filaAtual.inserirAviao(this);
                         SO1.se12000.up();
                         SO1.se18000.up();
-                    } else if (this.filaAtual.getName().equalsIgnoreCase("e18000")) {
+                    } else if (this.filaAtual.getName().equalsIgnoreCase("e18000")&& SO1.e20000.temEspaco()) {
                         SO1.se20000.down();
                         SO1.se18000.down();
                         this.filaAtual.removerPrimeiroAviao();
@@ -104,7 +104,7 @@ public class Aviao extends Thread{
                         SO1.se18000.up();
                        //Thread.sleep(2000);
                         SO1.se20000.up();
-                    } else if (this.filaAtual.getName().equalsIgnoreCase("e20000")) {
+                    } else if (this.filaAtual.getName().equalsIgnoreCase("e20000")&& SO1.e15000.temEspaco()) {
                         SO1.se15000.down();
                         SO1.se20000.down();
                         this.filaAtual.removerPrimeiroAviao();
@@ -112,7 +112,7 @@ public class Aviao extends Thread{
                         this.filaAtual.inserirAviao(this);
                         SO1.se20000.up();
                         SO1.se15000.up();                        
-                    } else if (this.filaAtual.getName().equalsIgnoreCase("e15000")) {
+                    } else if (this.filaAtual.getName().equalsIgnoreCase("e15000")&& SO1.e10000.temEspaco()) {
                         SO1.se10000.down();
                         SO1.se15000.down();
                         this.filaAtual.removerPrimeiroAviao();
@@ -128,7 +128,7 @@ public class Aviao extends Thread{
                         this.filaAtual.inserirAviao(this);
                         //SO1.spp.up();                        
                         SO1.se10000.up();
-                    } else if (this.filaAtual.getName().equalsIgnoreCase("pp")) {
+                    } else if (this.filaAtual.getName().equalsIgnoreCase("pp")&& SO1.fd.temEspaco()) {
                         Thread.sleep(1000);
                         
                         //SO1.spp.down();

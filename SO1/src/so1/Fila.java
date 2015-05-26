@@ -67,6 +67,17 @@ public class Fila{
         return this.avioes;
     }
     
+    public boolean temEspaco()
+    {
+        if (this.avioes.size() < 5){
+            return true;
+        }
+        else{
+            return false;
+        }
+            
+    }
+    
     /*
     public void run()
     {
