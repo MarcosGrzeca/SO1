@@ -5,11 +5,15 @@
  */
 package so1;
 
+import java.awt.Image;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
@@ -122,6 +126,17 @@ public class SO1 extends JFrame{
               } catch (InterruptedException ex) {}
         }*/
         
+        
+        
+         //JButton button = new JButton();
+        try {
+          Image img = ImageIO.read(getClass().getResource("../imagens/aviao1.png"));
+          //Setar imagens
+          panel.btnTeste.setIcon(new ImageIcon(img));
+          //Remover imagem
+          //panel.btnTeste.setIcon(null);
+        } catch (IOException ex) {
+        }
         
         
         while (true) {
