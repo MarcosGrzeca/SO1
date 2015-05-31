@@ -31,11 +31,12 @@ public class Aviao extends Thread{
     protected int numero;
     protected Fila filaAtual;
     
+    
     Aviao(String posicao, int numero, Fila filaAtual) {
         this.posicao = posicao;
         this.numero = numero;
         this.filaAtual = filaAtual;
-        this.filaAtual.inserirAviao(this);
+        this.filaAtual.inserirAviao(this);        
     }
     
     int getNumero() {
@@ -138,7 +139,9 @@ public class Aviao extends Thread{
                         SO1.spp.up();                        
                         SO1.sfd.up();
                     }
-                    
+                   
+                   
+                   
                    // this.filaAtual.removerPrimeiroAviao();
                     
                 } else {

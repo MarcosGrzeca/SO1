@@ -5,6 +5,7 @@
  */
 package so1;
 
+import java.awt.Color;
 import java.awt.Image;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -49,6 +50,7 @@ public class SO1 extends JFrame{
     static Fila pd;
     static Fila fd;
     
+    ControleGrafico controleGrafico;
     
     public void inicializarThreads() {
           /*Fila e5000 = new Fila("E5000", 1, panel);
@@ -84,6 +86,7 @@ public class SO1 extends JFrame{
         pd = new Fila("PD", 3, panel);
         fd = new Fila("FD", 4, panel);
         
+        controleGrafico = new ControleGrafico();
         /*for (int i = 1; i < 20; i++) {
             Aviao aviao = new Aviao("FD", i, fd);
             avioes.add(aviao);
@@ -131,8 +134,7 @@ public class SO1 extends JFrame{
          //JButton button = new JButton();
         try {
           Image img = ImageIO.read(getClass().getResource("../imagens/aviao1.png"));
-          //Setar imagens
-          panel.btnTeste.setIcon(new ImageIcon(img));
+          //Setar imagens          
           //Remover imagem
           //panel.btnTeste.setIcon(null);
         } catch (IOException ex) {
@@ -151,20 +153,26 @@ public class SO1 extends JFrame{
                 for (Aviao item : e5000.getAvioes()) {
                    System.out.println(item.getNumero());
                 }
-                panel.setTextJTable("111");*/
+                panel.setTextJTable("111");*/                
                 
-                
-                panel.setE500Text(e5000.getAvioesVirgula());
-                panel.setPdText(pd.getAvioesVirgula());
+                /* panel.setPdText(pd.getAvioesVirgula());
                 panel.setPpText(pp.getAvioesVirgula());
                 panel.setFdText(fd.getAvioesVirgula());
                 panel.setE12000Text(e12000.getAvioesVirgula());
                 panel.setE18000Text(e18000.getAvioesVirgula());
                 panel.setE20000Text(e20000.getAvioesVirgula());
                 panel.setE15000Text(e15000.getAvioesVirgula());
-                panel.setE10000Text(e10000.getAvioesVirgula());
+                panel.setE10000Text(e10000.getAvioesVirgula());*/
                 
-        
+                controleGrafico.exibeAvioesPd(SO1.pd);
+                controleGrafico.exibeAvioesPp(SO1.pp);
+                controleGrafico.exibeAvioesE5000(SO1.e5000);
+                controleGrafico.exibeAvioesE12000(SO1.e12000);
+                controleGrafico.exibeAvioesE18000(SO1.e18000);
+                controleGrafico.exibeAvioesE20000(SO1.e20000);
+                controleGrafico.exibeAvioesE15000(SO1.e15000);
+                controleGrafico.exibeAvioesE10000(SO1.e10000);
+                
                 
                 
                 Thread.sleep(1000); //Atualização a cada segundo
