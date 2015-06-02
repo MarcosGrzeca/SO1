@@ -43,6 +43,11 @@ public class Aviao extends Thread{
        return this.numero; 
     }
     
+    String  getNumberTxt()
+    {
+        return String.valueOf(numero);
+    }    
+    
     String getPosicao() {
        return this.posicao; 
     }

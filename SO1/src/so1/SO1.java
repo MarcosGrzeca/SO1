@@ -166,6 +166,7 @@ public class SO1 extends JFrame{
                 
                 controleGrafico.exibeAvioesPd(SO1.pd);
                 controleGrafico.exibeAvioesPp(SO1.pp);
+                controleGrafico.exibeAvioesFd(SO1.fd);
                 controleGrafico.exibeAvioesE5000(SO1.e5000);
                 controleGrafico.exibeAvioesE12000(SO1.e12000);
                 controleGrafico.exibeAvioesE18000(SO1.e18000);
