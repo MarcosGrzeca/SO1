@@ -55,16 +55,23 @@ public class Aviao extends Thread{
         while (true) {
             try {
                 Thread.sleep(3000);
+                //O Avião apenas passa para a outra fila/estrada quando é o primeiro Avião da fila que pertence
                 if (this.filaAtual.getNumeroPrimeiroAviao() == this.numero) {
+
                    if (this.filaAtual.getName().equalsIgnoreCase("fd")) {
+                       /*
+                         Quando o avião está na fila de decolagem
+                         Reserva recursos da pista e fila de decolagem
+                         Remove avião da fila de decolagem
+                         Insere na pista de decolagem
+                         Libera recursos da fila de decolagem
+                       */
                         ControleDasThreads.sfd.down();
                         ControleDasThreads.spd.down();
                         this.filaAtual.removerPrimeiroAviao();
-                        System.out.println("DECOLANDO");
                         this.filaAtual = ControleDasThreads.pd;
                         this.filaAtual.inserirAviao(this);
                         ControleDasThreads.sfd.up();
-                        //SO1.spd.up();
                     } else if (this.filaAtual.getName().equalsIgnoreCase("pd") && ControleDasThreads.e5000.temEspaco()) {
                         Thread.sleep(1000);
                         //SO1.spd.down();
