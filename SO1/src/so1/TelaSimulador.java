@@ -721,148 +721,221 @@ public class TelaSimulador extends javax.swing.JFrame {
 
         jLabel13.setText("Fila de Decolagem");
 
+        txpE18000_1.setEditable(false);
         jScrollPane1.setViewportView(txpE18000_1);
 
+        txpE18000_2.setEditable(false);
         jScrollPane2.setViewportView(txpE18000_2);
 
+        txpE18000_3.setEditable(false);
         jScrollPane3.setViewportView(txpE18000_3);
 
+        txpE18000_4.setEditable(false);
         jScrollPane4.setViewportView(txpE18000_4);
 
+        txpE18000_5.setEditable(false);
         jScrollPane5.setViewportView(txpE18000_5);
 
+        txpE18000_6.setEditable(false);
         jScrollPane6.setViewportView(txpE18000_6);
 
+        txpE18000_7.setEditable(false);
         jScrollPane7.setViewportView(txpE18000_7);
 
+        txpE18000_8.setEditable(false);
         jScrollPane8.setViewportView(txpE18000_8);
 
+        txpE18000_9.setEditable(false);
         jScrollPane9.setViewportView(txpE18000_9);
 
+        txpE18000_10.setEditable(false);
         jScrollPane10.setViewportView(txpE18000_10);
 
+        txpE12000_1.setEditable(false);
         jScrollPane11.setViewportView(txpE12000_1);
 
+        txpE12000_2.setEditable(false);
         jScrollPane12.setViewportView(txpE12000_2);
 
+        txpE12000_3.setEditable(false);
         jScrollPane13.setViewportView(txpE12000_3);
 
+        txpE12000_4.setEditable(false);
         jScrollPane14.setViewportView(txpE12000_4);
 
+        txpE12000_5.setEditable(false);
         jScrollPane15.setViewportView(txpE12000_5);
 
+        txpE12000_6.setEditable(false);
         jScrollPane16.setViewportView(txpE12000_6);
 
+        txpE12000_7.setEditable(false);
         jScrollPane17.setViewportView(txpE12000_7);
 
+        txpE12000_8.setEditable(false);
         jScrollPane18.setViewportView(txpE12000_8);
 
+        txpE12000_9.setEditable(false);
         jScrollPane19.setViewportView(txpE12000_9);
 
+        txpE12000_10.setEditable(false);
         jScrollPane20.setViewportView(txpE12000_10);
 
+        txpE5000_1.setEditable(false);
         jScrollPane21.setViewportView(txpE5000_1);
 
+        txpE5000_2.setEditable(false);
         jScrollPane22.setViewportView(txpE5000_2);
 
+        txpE5000_3.setEditable(false);
         jScrollPane23.setViewportView(txpE5000_3);
 
+        txpE5000_4.setEditable(false);
         jScrollPane24.setViewportView(txpE5000_4);
 
+        txpE5000_5.setEditable(false);
         jScrollPane25.setViewportView(txpE5000_5);
 
+        txpE5000_6.setEditable(false);
         jScrollPane26.setViewportView(txpE5000_6);
 
+        txpE5000_7.setEditable(false);
         jScrollPane27.setViewportView(txpE5000_7);
 
+        txpE5000_8.setEditable(false);
         jScrollPane28.setViewportView(txpE5000_8);
 
+        txpE5000_9.setEditable(false);
         jScrollPane29.setViewportView(txpE5000_9);
 
+        txpE5000_10.setEditable(false);
         jScrollPane30.setViewportView(txpE5000_10);
 
+        txpE20000_1.setEditable(false);
         jScrollPane31.setViewportView(txpE20000_1);
 
+        txpE20000_2.setEditable(false);
         jScrollPane32.setViewportView(txpE20000_2);
 
+        txpE20000_3.setEditable(false);
         jScrollPane33.setViewportView(txpE20000_3);
 
+        txpE20000_4.setEditable(false);
         jScrollPane34.setViewportView(txpE20000_4);
 
+        txpE20000_5.setEditable(false);
         jScrollPane35.setViewportView(txpE20000_5);
 
+        txpE20000_6.setEditable(false);
         jScrollPane36.setViewportView(txpE20000_6);
 
+        txpE20000_7.setEditable(false);
         jScrollPane37.setViewportView(txpE20000_7);
 
+        txpE20000_8.setEditable(false);
         jScrollPane38.setViewportView(txpE20000_8);
 
+        txpE20000_9.setEditable(false);
         jScrollPane39.setViewportView(txpE20000_9);
 
+        txpE20000_10.setEditable(false);
         jScrollPane40.setViewportView(txpE20000_10);
 
+        txpE15000_6.setEditable(false);
         jScrollPane41.setViewportView(txpE15000_6);
 
+        txpE15000_2.setEditable(false);
         jScrollPane42.setViewportView(txpE15000_2);
 
+        txpE15000_9.setEditable(false);
         jScrollPane43.setViewportView(txpE15000_9);
 
+        txpE15000_1.setEditable(false);
         jScrollPane44.setViewportView(txpE15000_1);
 
+        txpE15000_8.setEditable(false);
         jScrollPane45.setViewportView(txpE15000_8);
 
+        txpE15000_3.setEditable(false);
         jScrollPane46.setViewportView(txpE15000_3);
 
+        txpE15000_5.setEditable(false);
         jScrollPane47.setViewportView(txpE15000_5);
 
+        txpE15000_7.setEditable(false);
         jScrollPane48.setViewportView(txpE15000_7);
 
+        txpE15000_4.setEditable(false);
         jScrollPane49.setViewportView(txpE15000_4);
 
+        txpE15000_10.setEditable(false);
         jScrollPane50.setViewportView(txpE15000_10);
 
+        txpE10000_6.setEditable(false);
         jScrollPane51.setViewportView(txpE10000_6);
 
+        txpE10000_2.setEditable(false);
         jScrollPane52.setViewportView(txpE10000_2);
 
+        txpE10000_9.setEditable(false);
         jScrollPane53.setViewportView(txpE10000_9);
 
+        txpE10000_1.setEditable(false);
         jScrollPane54.setViewportView(txpE10000_1);
 
+        txpE10000_8.setEditable(false);
         jScrollPane55.setViewportView(txpE10000_8);
 
+        txpE10000_3.setEditable(false);
         jScrollPane56.setViewportView(txpE10000_3);
 
+        txpE10000_5.setEditable(false);
         jScrollPane57.setViewportView(txpE10000_5);
 
+        txpE10000_7.setEditable(false);
         jScrollPane58.setViewportView(txpE10000_7);
 
+        txpE10000_4.setEditable(false);
+        txpE10000_4.setAutoscrolls(false);
         jScrollPane59.setViewportView(txpE10000_4);
 
+        txpE10000_10.setEditable(false);
         jScrollPane60.setViewportView(txpE10000_10);
 
+        txpFd_6.setEditable(false);
         jScrollPane61.setViewportView(txpFd_6);
 
+        txpFd_2.setEditable(false);
         jScrollPane62.setViewportView(txpFd_2);
 
+        txpFd_9.setEditable(false);
         jScrollPane63.setViewportView(txpFd_9);
 
+        txpFd_1.setEditable(false);
         jScrollPane64.setViewportView(txpFd_1);
 
+        txpFd_8.setEditable(false);
         jScrollPane65.setViewportView(txpFd_8);
 
+        txpFd_3.setEditable(false);
         sdfasdf.setViewportView(txpFd_3);
 
+        txpFd_5.setEditable(false);
         scroesad.setViewportView(txpFd_5);
 
+        txpFd_7.setEditable(false);
         jScrollPane68.setViewportView(txpFd_7);
 
+        txpFd_4.setEditable(false);
         jScrollPane69.setViewportView(txpFd_4);
 
+        txpFd_10.setEditable(false);
         jScrollPane70.setViewportView(txpFd_10);
 
+        txpPd.setEditable(false);
         jScrollPane66.setViewportView(txpPd);
 
+        txpPp.setEditable(false);
         jScrollPane67.setViewportView(txpPp);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
