@@ -41,6 +41,7 @@ public class TelaInicial extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         nroAvioesPorPista = new javax.swing.JSpinner();
         botaoIniciar = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
 
         jMenu1.setText("jMenu1");
 
@@ -58,7 +59,7 @@ public class TelaInicial extends javax.swing.JFrame {
 
         jLabel2.setText("Número total de aviões");
 
-        nroAvioes.setModel(new javax.swing.SpinnerNumberModel(35, 1, 70, 5));
+        nroAvioes.setModel(new javax.swing.SpinnerNumberModel(20, 1, 70, 5));
 
         jLabel3.setText("Número máximo de aviões por pista");
 
@@ -81,6 +82,8 @@ public class TelaInicial extends javax.swing.JFrame {
             }
         });
 
+        jLabel4.setText("Autores: Éderson Copelli, Lucian Ferreira e Marcos Grzeça");
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -93,7 +96,8 @@ public class TelaInicial extends javax.swing.JFrame {
                     .addComponent(nroAvioes, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addComponent(botaoIniciar, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
-                        .addComponent(nroAvioesPorPista, javax.swing.GroupLayout.Alignment.LEADING)))
+                        .addComponent(nroAvioesPorPista, javax.swing.GroupLayout.Alignment.LEADING))
+                    .addComponent(jLabel4))
                 .addGap(0, 479, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -110,7 +114,9 @@ public class TelaInicial extends javax.swing.JFrame {
                 .addComponent(nroAvioesPorPista, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(botaoIniciar)
-                .addGap(0, 219, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 194, Short.MAX_VALUE)
+                .addComponent(jLabel4)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -247,6 +253,7 @@ public class TelaInicial extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
