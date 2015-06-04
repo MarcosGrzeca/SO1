@@ -1,13 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package so1;
-
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import static so1.SO1.e5000;
 
 /**
  *
@@ -60,111 +53,92 @@ public class Aviao extends Thread{
     public void run()
     {
         while (true) {
-    //        System.out.println(this.numero);
             try {
                 Thread.sleep(3000);
                 if (this.filaAtual.getNumeroPrimeiroAviao() == this.numero) {
                    if (this.filaAtual.getName().equalsIgnoreCase("fd")) {
-                        //System.out.println("ENTREI AQUI");
-                        SO1.sfd.down();
-                        SO1.spd.down();
+                        ControleDasThreads.sfd.down();
+                        ControleDasThreads.spd.down();
                         this.filaAtual.removerPrimeiroAviao();
-                       // Thread.sleep(2000);
                         System.out.println("DECOLANDO");
-                        this.filaAtual = SO1.pd;
+                        this.filaAtual = ControleDasThreads.pd;
                         this.filaAtual.inserirAviao(this);
-                        SO1.sfd.up();
+                        ControleDasThreads.sfd.up();
                         //SO1.spd.up();
-                    } else if (this.filaAtual.getName().equalsIgnoreCase("pd") && SO1.e5000.temEspaco()) {
+                    } else if (this.filaAtual.getName().equalsIgnoreCase("pd") && ControleDasThreads.e5000.temEspaco()) {
                         Thread.sleep(1000);
                         //SO1.spd.down();
-                        SO1.se5000.down();
+                        ControleDasThreads.se5000.down();
                         this.filaAtual.removerPrimeiroAviao();
-                        this.filaAtual = SO1.e5000;
+                        this.filaAtual = ControleDasThreads.e5000;
                         this.filaAtual.inserirAviao(this);
-                        SO1.se5000.up();
+                        ControleDasThreads.se5000.up();
                         Thread.sleep(1000);
-                        SO1.spd.up();
-                    } else if (this.filaAtual.getName().equalsIgnoreCase("e5000")&& SO1.e12000.temEspaco()) {
-                        SO1.se12000.down();
-                        SO1.se5000.down();
+                        ControleDasThreads.spd.up();
+                    } else if (this.filaAtual.getName().equalsIgnoreCase("e5000")&& ControleDasThreads.e12000.temEspaco()) {
+                        ControleDasThreads.se12000.down();
+                        ControleDasThreads.se5000.down();
                         this.filaAtual.removerPrimeiroAviao();
-                        this.filaAtual = SO1.e12000;
+                        this.filaAtual = ControleDasThreads.e12000;
                         this.filaAtual.inserirAviao(this);
-                        SO1.se5000.up();
-                        SO1.se12000.up();
-                    } else if (this.filaAtual.getName().equalsIgnoreCase("e12000")&& SO1.e18000.temEspaco()) {
-                        SO1.se18000.down();
-                        SO1.se12000.down();
+                        ControleDasThreads.se5000.up();
+                        ControleDasThreads.se12000.up();
+                    } else if (this.filaAtual.getName().equalsIgnoreCase("e12000")&& ControleDasThreads.e18000.temEspaco()) {
+                        ControleDasThreads.se18000.down();
+                        ControleDasThreads.se12000.down();
                         this.filaAtual.removerPrimeiroAviao();
-                        this.filaAtual = SO1.e18000;
+                        this.filaAtual = ControleDasThreads.e18000;
                         this.filaAtual.inserirAviao(this);
-                        SO1.se12000.up();
-                        SO1.se18000.up();
-                    } else if (this.filaAtual.getName().equalsIgnoreCase("e18000")&& SO1.e20000.temEspaco()) {
-                        SO1.se20000.down();
-                        SO1.se18000.down();
+                        ControleDasThreads.se12000.up();
+                        ControleDasThreads.se18000.up();
+                    } else if (this.filaAtual.getName().equalsIgnoreCase("e18000")&& ControleDasThreads.e20000.temEspaco()) {
+                        ControleDasThreads.se20000.down();
+                        ControleDasThreads.se18000.down();
                         this.filaAtual.removerPrimeiroAviao();
-                        this.filaAtual = SO1.e20000;
+                        this.filaAtual = ControleDasThreads.e20000;
                         this.filaAtual.inserirAviao(this);
-                        SO1.se18000.up();
+                        ControleDasThreads.se18000.up();
                        //Thread.sleep(2000);
-                        SO1.se20000.up();
-                    } else if (this.filaAtual.getName().equalsIgnoreCase("e20000")&& SO1.e15000.temEspaco()) {
-                        SO1.se15000.down();
-                        SO1.se20000.down();
+                        ControleDasThreads.se20000.up();
+                    } else if (this.filaAtual.getName().equalsIgnoreCase("e20000")&& ControleDasThreads.e15000.temEspaco()) {
+                        ControleDasThreads.se15000.down();
+                        ControleDasThreads.se20000.down();
                         this.filaAtual.removerPrimeiroAviao();
-                        this.filaAtual = SO1.e15000;
+                        this.filaAtual = ControleDasThreads.e15000;
                         this.filaAtual.inserirAviao(this);
-                        SO1.se20000.up();
-                        SO1.se15000.up();                        
-                    } else if (this.filaAtual.getName().equalsIgnoreCase("e15000")&& SO1.e10000.temEspaco()) {
-                        SO1.se10000.down();
-                        SO1.se15000.down();
+                        ControleDasThreads.se20000.up();
+                        ControleDasThreads.se15000.up();                        
+                    } else if (this.filaAtual.getName().equalsIgnoreCase("e15000")&& ControleDasThreads.e10000.temEspaco()) {
+                        ControleDasThreads.se10000.down();
+                        ControleDasThreads.se15000.down();
                         this.filaAtual.removerPrimeiroAviao();
-                        this.filaAtual = SO1.e10000;
+                        this.filaAtual = ControleDasThreads.e10000;
                         this.filaAtual.inserirAviao(this);
-                        SO1.se15000.up();                        
-                        SO1.se10000.up();
+                        ControleDasThreads.se15000.up();                        
+                        ControleDasThreads.se10000.up();
                     } else if (this.filaAtual.getName().equalsIgnoreCase("e10000")) {
-                        SO1.se10000.down();
-                        SO1.spp.down();
+                        ControleDasThreads.se10000.down();
+                        ControleDasThreads.spp.down();
                         this.filaAtual.removerPrimeiroAviao();
-                        this.filaAtual = SO1.pp;
+                        this.filaAtual = ControleDasThreads.pp;
                         this.filaAtual.inserirAviao(this);
                         //SO1.spp.up();                        
-                        SO1.se10000.up();
-                    } else if (this.filaAtual.getName().equalsIgnoreCase("pp")&& SO1.fd.temEspaco()) {
+                        ControleDasThreads.se10000.up();
+                    } else if (this.filaAtual.getName().equalsIgnoreCase("pp")&& ControleDasThreads.fd.temEspaco()) {
                         Thread.sleep(1000);
                         
                         //SO1.spp.down();
                         this.filaAtual.removerPrimeiroAviao();
-                        this.filaAtual = SO1.fd;
+                        this.filaAtual = ControleDasThreads.fd;
                         this.filaAtual.inserirAviao(this);
-                        SO1.spp.up();                        
-                        SO1.sfd.up();
+                        ControleDasThreads.spp.up();                        
+                        ControleDasThreads.sfd.up();
                     }
-                   
-                   
-                   
-                   // this.filaAtual.removerPrimeiroAviao();
-                    
                 } else {
-                   // System.out.println(this.numero + " NAO REMOVIDO");
                 }
-                
-                //System.out.println(this.filaAtual.getNumeroPrimeiroAviao() + " NAO REMOVIDO");
-                //Verificar se é primeiro da fila
-                //Reserva recursos
-                //Move fila
-                //Libera recursos
-                
-                
-                
             } catch (InterruptedException ex) {
                 Logger.getLogger(Aviao.class.getName()).log(Level.SEVERE, null, ex);
             }
-        }
-        
+        }        
     }     
 }

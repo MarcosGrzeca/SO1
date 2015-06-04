@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package so1;
 
 import java.awt.Image;
@@ -11,19 +6,14 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
-import static so1.SO1.panel;
+import static so1.Inicial.panel;
 
 /**
  *
  * @author Éderson
  */
 public class ControleGrafico {
-    
-    /**
-     *
-     * @param fe18000
-     */
-    
+
     public void exibeAvioesPd(Fila fPd)
     {
       
@@ -608,7 +598,5 @@ public class ControleGrafico {
         } catch (IOException ex) {
             Logger.getLogger(ControleGrafico.class.getName()).log(Level.SEVERE, null, ex);
         }
-    }
-    
-    
+    }   
 }

@@ -7,8 +7,6 @@ package so1;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  *
@@ -18,8 +16,7 @@ public class Fila{
 
     public String name;
     public Integer tipo;
-    public Vetor vetor;
-    public Panel panel;
+    public TelaSimulador panel;
     public List<Aviao> avioes;
 
     /*
@@ -31,7 +28,7 @@ public class Fila{
     
     */
     
-    Fila(String name, Integer tipo, Panel panel) {
+    Fila(String name, Integer tipo, TelaSimulador panel) {
         this.panel = panel;
         this.tipo = tipo;
         this.name = name;
@@ -39,7 +36,6 @@ public class Fila{
     }
     
     public void inserirAviao(Aviao aviao) {
-      //  System.out.println("INSERINDO AVION NA FILA " + this.name);
        avioes.add(aviao);
     }
     
@@ -59,8 +55,7 @@ public class Fila{
         if (avioes.isEmpty()) {
                return -1;
         }
-        return avioes.get(0).getNumero();
-        
+        return avioes.get(0).getNumero();        
     }
     
     public List<Aviao> getAvioes() {
@@ -69,52 +64,11 @@ public class Fila{
     
     public boolean temEspaco()
     {
-        if (this.avioes.size() < 5){
+        if (this.avioes.size() < ControleDasThreads.nroAvioesPorFila){
             return true;
         }
         else{
             return false;
         }
-            
-    }
-    
-    /*
-    public void run()
-    {
-       while (true) {
-        try
-         {
-             System.out.println(this.name);
-             panel.setTextJTable(this.name);
-         }
-        catch(Exception e )
-         {
-           e.printStackTrace();
-         }
-           try {
-            Thread.sleep(3000); //Atualização a cada segundo
-           } catch (InterruptedException ex) {
-               Logger.getLogger(Fila.class.getName()).log(Level.SEVERE, null, ex);
-           }
-       }
-    }
-    */
-    
-    
-    public String getAvioesVirgula() {
-        String ret = "";
-        
-        try {
-            if (this.getAvioes().isEmpty()) {
-                return ret;
-            }
-            for (Aviao item : this.getAvioes()) {
-                ret += item.getNumero() + " ";
-            }   
-        } catch (Exception e) {
-            System.out.println("ERRO OBTENDO AVIOES");
-            ret = "Erro";
-        }
-        return ret;
     }
 }
