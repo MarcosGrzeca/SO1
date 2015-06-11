@@ -10,6 +10,7 @@ public class Aviao extends Thread{
 
     protected String posicao;
     /*
+    FD - Fila de decolagem
     PP - Pista de pouso
     PD - Pista de decolagem
     E5000 - Estrada 5000 (Decolagem)
