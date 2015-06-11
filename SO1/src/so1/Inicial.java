@@ -17,6 +17,8 @@ public class Inicial {
         panel.setLocationByPlatform(true);
 
         panel.setVisible(true);
+        
+        panel.setTitle("Aeroporto SO");
         frameTelaInicial.setVisible(false);
         ControleDasThreads iniciar = new ControleDasThreads();
         iniciar.iniciar(nroTotalAvioes, nroMaxAvioesPorPista);
@@ -28,6 +30,7 @@ public class Inicial {
         frameTelaInicial = new TelaInicial();
         frameTelaInicial.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);      
         frameTelaInicial.setLocationByPlatform(true);
-        frameTelaInicial.setVisible(true);     
+        frameTelaInicial.setVisible(true);
+        frameTelaInicial.setTitle("Aeroporto SO");
     }
 }
